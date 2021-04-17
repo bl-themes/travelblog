@@ -16,7 +16,6 @@
         <h1 class="pt-4"><?php echo $page->title(); ?></h1>
         <p class="text-secondary"><small><i class="far fa-folder text-danger"></i>&nbsp;<?php echo $page->category() ?> &nbsp;<i class="far fa-clock text-danger"></i>&nbsp;<?php echo $page->date(); ?> &nbsp;<i class="far fa-user text-danger"></i>&nbsp;<?php echo $page->user('nickname'); ?></small></p>
         <p class="pt-3"><?php echo $page->content(); ?></p>
-            <?php Theme::plugins('pageEnd'); ?>
         <br>
         <?php if (!empty($page->tags(true))): ?>
         <ul class="nav">
@@ -27,6 +26,8 @@
           <?php endforeach ?>
         </ul>
         <?php endif; ?>
+        <br>
+        <?php Theme::plugins('pageEnd'); ?>
         </div>
         <!-- sidebar -->
         <?php include('sidebar.php'); ?>
